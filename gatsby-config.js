@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Terry Reynolds - Decadent Developer Blog`,
     author: `Terry Reynolds`,
-    description: `A blog created using Gatsby starter blog`,
+    description: `A blog by Terry Reynolds created using Gatsby starter blog`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `codecadence`,
