@@ -1,7 +1,7 @@
 import Typography from "typography"
 //import Wordpress2016 from "typography-theme-wordpress-2016"
 
-/*Wordpress2016.overrideThemeStyles = () => {
+Wordpress2016.overrideThemeStyles = () => {
   return {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
@@ -10,20 +10,8 @@ import Typography from "typography"
 }
 
 delete Wordpress2016.googleFonts
-*/
-const typography = new Typography({
-  baseFontSize: "18px",
-  baseLineHeight: 1.5,
-  scaleRatio: 2.5,
-  headerGray: 0,
-  headerFontFamily: ["cairo"],
-  headerWeight: 600,
-  headerColor: "#efedf5",
-  bodyFontFamily: ["cairo"],
-  bodyWeight: 600,
-  bodyColor: "#efedf5",
-  bodyGray: 0,
-})
+
+const typography = new Typography(Wordpress2016)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

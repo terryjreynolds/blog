@@ -22,7 +22,7 @@ class Layout extends React.Component {
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              color: `rgb(212, 146, 3)`,
             }}
             to={`/`}
           >
@@ -34,7 +34,6 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
           }}
         >
