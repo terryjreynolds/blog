@@ -8,7 +8,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faTwitter,
+  faLinkedinIn,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons"
 import { rhythm } from "../utils/typography"
 import { redirectTo } from "@reach/router"
 
@@ -32,7 +37,11 @@ const Bio = () => {
       }
     }
   `)
-
+  const brandStyling = {
+    color: "white",
+    fontSize: "2vw",
+    marginRight: rhythm(1 / 2),
+  }
   const { author, social } = data.site.siteMetadata
   return (
     <div
@@ -47,16 +56,41 @@ const Bio = () => {
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
+
           minWidth: 50,
+          border: ".09vw solid #efedf5",
         }}
       />
-      <p>
-        <strong>{author}</strong> is a developer and teacher from Sharbot Lake,
-        Ontario, Canada.
+      <p style={{}}>
+        <a href={`https://terryjreynolds.github.io/`} target="_blank">
+          <strong>{author}</strong>
+        </a>{" "}
+        is a developer and teacher from Sharbot Lake, Ontario, Canada.
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          Follow me on Twitter
-        </a>
+        <span
+          style={{
+            display: "block",
+          }}
+        >
+          <a
+            style={brandStyling}
+            href={`https://twitter.com/${social.twitter}`}
+          >
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+          <a
+            style={brandStyling}
+            href={`https://twitter.com/${social.twitter}`}
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
+          <a
+            style={brandStyling}
+            href={`https://twitter.com/${social.twitter}`}
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+        </span>
       </p>
     </div>
   )

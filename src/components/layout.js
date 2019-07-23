@@ -46,6 +46,11 @@ class Layout extends React.Component {
             to={`/`}
           >
             {title}
+            <img
+              className="hamburger-menu"
+              alt="hamburger menu return to home navigation screen "
+              src="https://lh3.googleusercontent.com/Pbo56p1iRaQztgKCKWYznBGtp9MMHT0-QY3ejJNYfSI30vlHCikAPItueHJZ4SuQ8jUvk8h8NssqVcM7B8dkT38yR3_sRIFkXuhGR7d7Xwhl-IhsqrPIEwLaz4Lg4mlYZsMZ0jXyhQ=s252-p-k"
+            ></img>
           </Link>
         </h3>
       )

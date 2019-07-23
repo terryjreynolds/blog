@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(0, 0, 0);
+}
+a {
+  color: green;
+}
+h1 {
+  color: rgb(180, 9, 180);
+}
+h3 {
+  color: rgb(212, 146, 3);
+}
+.hamburger-menu {
+  width: 5%;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  float: right;
+}
