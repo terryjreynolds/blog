@@ -14,7 +14,7 @@ import {
   faLinkedinIn,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons"
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 import { redirectTo } from "@reach/router"
 
 const Bio = () => {
@@ -55,13 +55,15 @@ const Bio = () => {
         alt={author}
         style={{
           marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-
           minWidth: 50,
           border: ".09vw solid #efedf5",
         }}
       />
-      <p style={{}}>
+      <p
+        style={{
+          marginBottom: 0,
+        }}
+      >
         <a href={`https://terryjreynolds.github.io/`} target="_blank">
           <strong>{author}</strong>
         </a>{" "}
@@ -75,18 +77,21 @@ const Bio = () => {
           <a
             style={brandStyling}
             href={`https://twitter.com/${social.twitter}`}
+            target="_blank"
           >
             <FontAwesomeIcon icon={faTwitter} />
           </a>
           <a
             style={brandStyling}
-            href={`https://twitter.com/${social.twitter}`}
+            href={`https://www.linkedin.com/in/terryreynolds5330/}`}
+            target="_blank"
           >
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
           <a
             style={brandStyling}
-            href={`https://twitter.com/${social.twitter}`}
+            href={`https://github.com/terryjreynolds`}
+            target="_blank"
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
