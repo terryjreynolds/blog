@@ -12,9 +12,9 @@ import Typography from "typography"
 delete Wordpress2016.googleFonts
 */
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: "18",
   baseLineHeight: 1.5,
-  scaleRatio: 2.5,
+  scaleRatio: 1.666,
   headerGray: 0,
   headerFontFamily: ["cairo"],
   headerWeight: 600,

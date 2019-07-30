@@ -39,7 +39,7 @@ const Bio = () => {
   `)
   const brandStyling = {
     color: "white",
-    fontSize: "2vw",
+    fontSize: "3.8vh",
     marginRight: rhythm(1 / 2),
   }
   const { author, social } = data.site.siteMetadata
@@ -56,7 +56,7 @@ const Bio = () => {
         style={{
           marginRight: rhythm(1 / 2),
           minWidth: 50,
-          border: ".09vw solid #efedf5",
+          border: ".1vw solid #efedf5",
         }}
       />
       <p
@@ -67,7 +67,7 @@ const Bio = () => {
         <a href={`https://terryjreynolds.github.io/`} target="_blank">
           <strong>{author}</strong>
         </a>{" "}
-        is a developer and teacher from Sharbot Lake, Ontario, Canada.
+        is a blogger, developer and teacher from Sharbot Lake, Ontario, Canada.
         {` `}
         <span
           style={{
