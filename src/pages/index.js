@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-
+import Toggle from "../components/toggle"
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props

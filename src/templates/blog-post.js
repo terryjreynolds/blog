@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import { formatReadingTime } from "../utils/helpers"
-
+//this component is how the post looks after clicking on a post link on the main page
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark

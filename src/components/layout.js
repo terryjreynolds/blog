@@ -2,10 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
-
+import Toggle from "../components/toggle"
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
+
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
@@ -13,7 +14,7 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(1.8),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -28,6 +29,13 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
+          <span
+            style={{
+              float: "right",
+            }}
+          >
+            <Toggle />
+          </span>
         </h1>
       )
     } else {
