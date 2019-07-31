@@ -6,9 +6,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import { formatReadingTime } from "../utils/helpers"
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
+    console.log("post", post)
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
@@ -30,12 +32,21 @@ class BlogPostTemplate extends React.Component {
           style={{
             ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
+            marginBottom: rhythm(0.1),
           }}
         >
           {post.frontmatter.date}
-          {` ${formatReadingTime(post.timeToRead)}`}
         </p>
+        <div
+          style={{
+            ...scale(-1 / 5),
+            display: `block`,
+            marginBottom: rhythm(0.8),
+          }}
+        >{` ${formatReadingTime(
+          post.wordCount.words,
+          post.frontmatter.imageCount || null
+        )}`}</div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -87,11 +98,15 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
-      timeToRead
+
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        imageCount
+      }
+      wordCount {
+        words
       }
     }
   }
