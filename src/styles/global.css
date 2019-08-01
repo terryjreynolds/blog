@@ -2,13 +2,90 @@
   box-sizing: border-box;
 }
 
+.faDark {
+  color: white;
+  width: 3.5vw;
+  opacity: 1;
+  animation-name: invertToDarkColors;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+@keyframes invertToDarkColors {
+  0% {
+    color: rgb(0, 0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+}
+
+.faLight {
+  width: 3.5vw;
+  color: rgb(0, 0, 0);
+  opacity: 1;
+  animation-name: invertToLightColors;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+@keyframes invertToLightColors {
+  0% {
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
+  }
+  100% {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+  }
+}
+
 .darkMode {
   background-color: rgb(0, 0, 0);
   color: #efedf5;
+  opacity: 1;
+  animation-name: fadeInDarkMode;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
 }
+
+@keyframes fadeInDarkMode {
+  0% {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    background-color: rgb(0, 0, 0);
+    color: #efedf5;
+    opacity: 1;
+  }
+}
+
 .lightMode {
-  background-color: #efedf5;
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+  opacity: 1;
+  animation-name: fadeInLightMode;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeInLightMode {
+  0% {
+    background-color: rgb(0, 0, 0);
+    color: #efedf5;
+    opacity: 0.8;
+  }
+  100% {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    opacity: 1;
+  }
 }
 .darkFont {
   color: rgb(0, 0, 0);

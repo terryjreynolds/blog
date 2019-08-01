@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 import Toggle from "../components/toggle"
+import { redirectTo } from "@reach/router"
+import { faBuromobelexperte } from "@fortawesome/free-brands-svg-icons"
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -12,31 +14,36 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
+        <div
           style={{
-            ...scale(1.8),
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
             marginBottom: rhythm(1.5),
-            marginTop: 0,
           }}
         >
-          <Link
+          <h1
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `rgb(212, 146, 3)`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-          <span
-            style={{
-              float: "right",
+              ...scale(1.8),
+              margin: 0,
             }}
           >
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `rgb(212, 146, 3)`,
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h1>
+          <span>
             <Toggle />
           </span>
-        </h1>
+        </div>
       )
     } else {
       header = (
@@ -52,6 +59,7 @@ class Layout extends React.Component {
             style={{
               textDecoration: `none`,
               color: `inherit`,
+              backgroundColor: "white",
             }}
             to={`/`}
           >

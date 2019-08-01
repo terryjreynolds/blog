@@ -6,13 +6,13 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, withAssetPrefix } from "gatsby"
 import Image from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faTwitter,
   faLinkedinIn,
-  faGithub,
+  faGithubAlt,
   faBlackTie,
 } from "@fortawesome/free-brands-svg-icons"
 import { rhythm, scale } from "../utils/typography"
@@ -80,43 +80,21 @@ const Bio = () => {
             href={`https://twitter.com/${social.twitter}`}
             target="_blank"
           >
-            <FontAwesomeIcon
-              style={{
-                backgroundColor: "rgb(0, 0, 0)",
-                borderRadius: "6px",
-              }}
-              icon={faTwitter}
-            />
+            <FontAwesomeIcon name="fa" className="faDark" icon={faTwitter} />
           </a>
           <a
             style={brandStyling}
             href={`https://www.linkedin.com/in/terryreynolds5330/}`}
             target="_blank"
           >
-            <FontAwesomeIcon
-              style={{
-                backgroundColor: "rgb(0, 0, 0)",
-                borderRadius: "4px",
-              }}
-              icon={faLinkedinIn}
-            />
+            <FontAwesomeIcon name="fa" className="faDark" icon={faLinkedinIn} />
           </a>
           <a
-            style={{
-              color: "white",
-              fontSize: "3.8vh",
-              marginRight: "0",
-            }}
+            style={brandStyling}
             href={`https://github.com/terryjreynolds`}
             target="_blank"
           >
-            <FontAwesomeIcon
-              style={{
-                backgroundColor: "rgb(0, 0, 0)",
-                borderRadius: "6px",
-              }}
-              icon={faGithub}
-            />
+            <FontAwesomeIcon name="fa" className="faDark" icon={faGithubAlt} />
           </a>
         </span>
       </p>
