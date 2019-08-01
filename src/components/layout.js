@@ -42,23 +42,20 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
+            ...scale(1.8),
             marginTop: 0,
+            color: "rgb(212, 146, 3)",
+            textShadow: "0.05vw 0.05vw rgb(0, 0, 0)",
           }}
         >
           <Link
             style={{
-              boxShadow: `none`,
               textDecoration: `none`,
               color: `inherit`,
             }}
             to={`/`}
           >
             {title}
-            <img
-              className="hamburger-menu"
-              alt="hamburger menu return to home navigation screen "
-              src="https://lh3.googleusercontent.com/Pbo56p1iRaQztgKCKWYznBGtp9MMHT0-QY3ejJNYfSI30vlHCikAPItueHJZ4SuQ8jUvk8h8NssqVcM7B8dkT38yR3_sRIFkXuhGR7d7Xwhl-IhsqrPIEwLaz4Lg4mlYZsMZ0jXyhQ=s252-p-k"
-            ></img>
           </Link>
         </h3>
       )

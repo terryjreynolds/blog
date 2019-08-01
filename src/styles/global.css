@@ -2,14 +2,26 @@
   box-sizing: border-box;
 }
 
-body {
+.darkMode {
   background-color: rgb(0, 0, 0);
+  color: #efedf5;
+}
+.lightMode {
+  background-color: #efedf5;
+  color: rgb(0, 0, 0);
+}
+.darkFont {
+  color: rgb(0, 0, 0);
+}
+.lightFont {
+  color: #efedf5;
 }
 a {
   color: green;
 }
 h1 {
   color: rgb(180, 9, 180);
+  text-shadow: 0.05vw 0.05vw rgb(0, 0, 0);
 }
 h3 {
   color: rgb(212, 146, 3);

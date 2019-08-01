@@ -13,6 +13,7 @@ import {
   faTwitter,
   faLinkedinIn,
   faGithub,
+  faBlackTie,
 } from "@fortawesome/free-brands-svg-icons"
 import { rhythm, scale } from "../utils/typography"
 import { redirectTo } from "@reach/router"
@@ -79,21 +80,43 @@ const Bio = () => {
             href={`https://twitter.com/${social.twitter}`}
             target="_blank"
           >
-            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon
+              style={{
+                backgroundColor: "rgb(0, 0, 0)",
+                borderRadius: "6px",
+              }}
+              icon={faTwitter}
+            />
           </a>
           <a
             style={brandStyling}
             href={`https://www.linkedin.com/in/terryreynolds5330/}`}
             target="_blank"
           >
-            <FontAwesomeIcon icon={faLinkedinIn} />
+            <FontAwesomeIcon
+              style={{
+                backgroundColor: "rgb(0, 0, 0)",
+                borderRadius: "4px",
+              }}
+              icon={faLinkedinIn}
+            />
           </a>
           <a
-            style={brandStyling}
+            style={{
+              color: "white",
+              fontSize: "3.8vh",
+              marginRight: "0",
+            }}
             href={`https://github.com/terryjreynolds`}
             target="_blank"
           >
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon
+              style={{
+                backgroundColor: "rgb(0, 0, 0)",
+                borderRadius: "6px",
+              }}
+              icon={faGithub}
+            />
           </a>
         </span>
       </p>

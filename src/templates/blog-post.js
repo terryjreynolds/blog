@@ -22,6 +22,7 @@ class BlogPostTemplate extends React.Component {
         />
         <h1
           style={{
+            textShadow: "none",
             marginTop: rhythm(1),
             marginBottom: 0,
           }}
