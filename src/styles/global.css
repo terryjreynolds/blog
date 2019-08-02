@@ -4,7 +4,7 @@
 
 .faDark {
   color: white;
-  width: 3.5vw;
+  width: 3vw;
   opacity: 1;
   animation-name: invertToDarkColors;
   animation-iteration-count: 1;
@@ -23,7 +23,7 @@
 }
 
 .faLight {
-  width: 3.5vw;
+  width: 3vw;
   color: rgb(0, 0, 0);
   opacity: 1;
   animation-name: invertToLightColors;
@@ -87,12 +87,7 @@
     opacity: 1;
   }
 }
-.darkFont {
-  color: rgb(0, 0, 0);
-}
-.lightFont {
-  color: #efedf5;
-}
+
 a {
   color: green;
 }

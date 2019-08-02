@@ -26,7 +26,6 @@ export default function Toggle() {
       let fa = document.getElementsByName("fa")
 
       fa.forEach(c => (c.className.baseVal = "faDark"))
-      // document.body.className = "lightFont"
     } else {
       document.body.className = "lightMode"
 
