@@ -1,4 +1,11 @@
-const brandStyling = {
-    fontSize: "3.8vh",
-    marginRight: rhythm(1 / 2),
+ componentDidMount() {
+    document.addEventListener("keydown", function(e) {
+      if (e.keyCode == 9) {
+        e.preventDefault()
+        const elem = document.querySelector("button")
+        console.log("elem", elem)
+        elem.classList.remove("buttonOutlineRemoved:focus")
+        elem.classList.add("buttonOutlineApplied:focus")
+      }
+    })
   }

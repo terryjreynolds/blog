@@ -40,9 +40,8 @@ class Layout extends React.Component {
               {title}
             </Link>
           </h1>
-          <span>
-            <Toggle />
-          </span>
+
+          <Toggle />
         </div>
       )
     } else {

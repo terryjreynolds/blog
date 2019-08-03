@@ -48,6 +48,7 @@ const Bio = () => {
           marginRight: rhythm(1 / 2),
           minWidth: 50,
           border: ".1vw solid #efedf5",
+          borderRadius: "8px",
         }}
       />
       <p
