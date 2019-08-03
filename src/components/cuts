@@ -1,0 +1,4 @@
+const brandStyling = {
+    fontSize: "3.8vh",
+    marginRight: rhythm(1 / 2),
+  }

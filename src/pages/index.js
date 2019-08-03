@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import SocialLink from "../components/social"
 import { rhythm } from "../utils/typography"
 import Toggle from "../components/toggle"
 class BlogIndex extends React.Component {
@@ -17,6 +18,7 @@ class BlogIndex extends React.Component {
         <SEO title="All posts" />
 
         <Bio />
+        <SocialLink />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
