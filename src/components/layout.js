@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 import Toggle from "../components/toggle"
-import { redirectTo } from "@reach/router"
-import { faBuromobelexperte } from "@fortawesome/free-brands-svg-icons"
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -18,7 +17,7 @@ class Layout extends React.Component {
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
+            justifyContent: "flex-start",
             alignItems: "center",
             marginBottom: rhythm(1.5),
           }}

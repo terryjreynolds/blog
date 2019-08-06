@@ -13,6 +13,25 @@ class BlogIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
 
+    //accessibility note: on first click of tab key, restores button outlines for keyboard users. Switches back to no outlines if mouse clicked. But still listens for tabbing.
+    function handleFirstTab(e) {
+      if (e.keyCode === 9) {
+        // code 9 is the tab key
+        document.body.classList.add("userTabs")
+        window.removeEventListener("keydown", handleFirstTab)
+        window.addEventListener("mousedown", handleMouseDownOnce)
+      }
+    }
+
+    function handleMouseDownOnce() {
+      document.body.classList.remove("userTabs")
+
+      window.removeEventListener("mousedown", handleMouseDownOnce)
+      window.addEventListener("keydown", handleFirstTab)
+    }
+
+    window.addEventListener("keydown", handleFirstTab)
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />

@@ -1,7 +1,7 @@
 import React from "react"
 import { useState, useEffect } from "react"
 
-//stores the present state of the dark/light mode in local storage to persist in the users next session
+//stores the present state of the dark/light mode in local storage to persist in the user's next session
 
 export default function Toggle() {
   let retrievedViewMode = localStorage.getItem("userViewMode")
@@ -11,6 +11,7 @@ export default function Toggle() {
     retrievedViewMode = localStorage.getItem("userViewMode")
   }
 
+  //state variables for button icons
   const [buttonIcon, setButtonIcon] = useState(retrievedViewMode)
   localStorage.setItem("userViewMode", buttonIcon)
 
@@ -26,17 +27,31 @@ export default function Toggle() {
     let modeButton = document.querySelector("button")
     console.log(modeButton)
     if (buttonIcon == "🌞") {
-      document.body.className = "darkMode"
+      document.body.classList.remove("lightMode")
+      document.body.classList.add("darkMode")
       modeButton.className = "buttonDark"
       if (faIcon[0].classList.contains("faLight")) {
         faIcon.forEach(icon => icon.classList.remove("faLight"))
       }
     } else {
-      document.body.className = "lightMode"
+      document.body.classList.add("lightMode")
+      document.body.classList.remove("darkMode")
       modeButton.className = "buttonLight"
       faIcon.forEach(icon => icon.classList.add("faLight"))
     }
   })
 
-  return <button onClick={handleClick}>{buttonIcon}</button>
+  return (
+    <div
+      style={{
+        display: "flex",
+        width: "100%",
+
+        flexDirection: "row",
+        justifyContent: "flex-end",
+      }}
+    >
+      <button onClick={handleClick}>{buttonIcon}</button>
+    </div>
+  )
 }

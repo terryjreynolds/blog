@@ -17,7 +17,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 80, height: 80) {
+          fixed(width: 130, height: 130) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -46,14 +46,14 @@ const Bio = () => {
         alt={author}
         style={{
           marginRight: rhythm(1 / 2),
-          minWidth: 50,
+          minWidth: 130,
           border: ".1vw solid #efedf5",
-          borderRadius: "8px",
         }}
       />
       <p
         style={{
           marginBottom: 0,
+          minWidth: 170,
         }}
       >
         <a href={`https://terryjreynolds.github.io/`} target="_blank">

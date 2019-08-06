@@ -1,6 +1,6 @@
 import React from "react"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faTwitter,
@@ -13,25 +13,28 @@ const SocialLink = () => {
     <div
       style={{
         display: `flex`,
+        flexFlow: "row wrap",
         marginBottom: rhythm(1.5),
+        marginRight: 0,
+        justifyContent: "flex-start",
       }}
     >
       <a
-        href={`https://twitter.com/codecadence}`}
+        href="https://twitter.com/codecadence/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FontAwesomeIcon icon={faTwitter} />
       </a>
       <a
-        href={`https://www.linkedin.com/in/terryreynolds5330/}`}
+        href="https://www.linkedin.com/in/terryreynolds5330/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FontAwesomeIcon icon={faLinkedinIn} />
       </a>
       <a
-        href={`https://github.com/terryjreynolds`}
+        href="https://github.com/terryjreynolds"
         target="_blank"
         rel="noopener noreferrer"
       >
