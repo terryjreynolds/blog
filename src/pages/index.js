@@ -8,12 +8,9 @@ import SocialLink from "../components/social"
 import { rhythm } from "../utils/typography"
 import Toggle from "../components/toggle"
 class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+  //accessibility note: on first click of tab key, restores button outlines for keyboard users. Switches back to no outlines if mouse clicked. But still listens for tabbing.
 
-    //accessibility note: on first click of tab key, restores button outlines for keyboard users. Switches back to no outlines if mouse clicked. But still listens for tabbing.
+  componentDidMount() {
     function handleFirstTab(e) {
       if (e.keyCode === 9) {
         // code 9 is the tab key
@@ -31,6 +28,11 @@ class BlogIndex extends React.Component {
     }
 
     window.addEventListener("keydown", handleFirstTab)
+  }
+  render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const posts = data.allMarkdownRemark.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
