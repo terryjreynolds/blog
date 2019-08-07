@@ -5,7 +5,7 @@
 /*This fellow selects only adjacent span and em that share the same parent*/
 
 span + em {
-  font-size: 1.3vw;
+  font-size: 12px;
 }
 
 /*------------ Basic global selectors----------*/

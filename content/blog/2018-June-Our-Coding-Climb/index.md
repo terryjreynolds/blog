@@ -1,5 +1,6 @@
 ---
 title: Our Coding Climb (in progress, of course)
+description: My personal coding history in 3 minutes
 date: 2018-06-22
 imageCount: 1
 ---

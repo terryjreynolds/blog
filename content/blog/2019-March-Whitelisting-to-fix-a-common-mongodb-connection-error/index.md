@@ -1,5 +1,6 @@
 ---
 title: Whitelisting to Fix a Common MongoDB Connection Error
+description: How to easily fix a MongoDB connection error by adding your IP to a whitelist
 date: 2019-03-11
 imageCount: 7
 ---
