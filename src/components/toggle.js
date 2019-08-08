@@ -1,27 +1,28 @@
 import React from "react"
 import { useState, useEffect } from "react"
 
-//stores the present state of the dark/light mode in local storage to persist in the user's next session
-
-export default function Toggle() {
-  let retrievedViewMode = localStorage.getItem("userViewMode")
-  if (retrievedViewMode == null) {
-    console.log("null?", retrievedViewMode)
-    localStorage.setItem("userViewMode", "🌞")
-    retrievedViewMode = localStorage.getItem("userViewMode")
-  }
-
+function Toggle() {
   //state variables for button icons
-  const [buttonIcon, setButtonIcon] = useState(retrievedViewMode)
-  localStorage.setItem("userViewMode", buttonIcon)
+  const [buttonIcon, setButtonIcon] = useState("🌞")
 
-  //onclick sets the appropriate moon or sun icon on the button
   function handleClick() {
-    setButtonIcon(buttonIcon == "🌞" ? "🌛" : "🌞")
-    localStorage.setItem("userViewMode", buttonIcon)
+    let value = localStorage.getItem("userViewMode")
+    localStorage.setItem("userViewMode", value == "🌞" ? "🌛" : "🌞")
+    setButtonIcon(localStorage.getItem("userViewMode"))
   }
-
   //hook switches between dark and light social icons
+  useEffect(() => {
+    let storedValue = localStorage.getItem("userViewMode")
+    console.log("storedValue", storedValue)
+    if (storedValue != null) {
+      setButtonIcon(storedValue)
+    } else {
+      localStorage.setItem("userViewMode", buttonIcon)
+      setButtonIcon(localStorage.getItem("userViewMode"))
+      console.log("buttonIcon", buttonIcon)
+    }
+  })
+
   useEffect(() => {
     let faIcon = document.querySelectorAll("svg")
     let modeButton = document.querySelector("button")
@@ -34,10 +35,12 @@ export default function Toggle() {
         faIcon.forEach(icon => icon.classList.remove("faLight"))
       }
     } else {
-      document.body.classList.add("lightMode")
-      document.body.classList.remove("darkMode")
-      modeButton.className = "buttonLight"
-      faIcon.forEach(icon => icon.classList.add("faLight"))
+      if (document.body.classList.contains("darkMode")) {
+        document.body.classList.remove("darkMode")
+        document.body.classList.add("lightMode")
+        modeButton.className = "buttonLight"
+        faIcon.forEach(icon => icon.classList.add("faLight"))
+      }
     }
   })
 
@@ -55,3 +58,5 @@ export default function Toggle() {
     </div>
   )
 }
+
+export default Toggle
