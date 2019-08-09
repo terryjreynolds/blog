@@ -30,6 +30,8 @@ body {
   color: #efedf5;
 }
 button {
+  background-color: black;
+  border: 0.05vw solid white;
   margin: 0 8px 0 8px;
 }
 /* Used with the accessibility functions in index component */

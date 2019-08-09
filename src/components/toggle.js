@@ -2,45 +2,35 @@ import React from "react"
 import { useState, useEffect } from "react"
 
 function Toggle() {
-  //state variables for button icons
-  const [buttonIcon, setButtonIcon] = useState("🌞")
-
   function handleClick() {
-    let value = localStorage.getItem("userViewMode")
-    localStorage.setItem("userViewMode", value == "🌞" ? "🌛" : "🌞")
-    setButtonIcon(localStorage.getItem("userViewMode"))
+    console.log("HANDLECLICK")
+
+    console.log("SETSTORAGEKEY")
+    localStorage.setItem(
+      "viewMode",
+      localStorage.getItem("viewMode") == "🌞" ? "🌛" : "🌞"
+    )
   }
+  const [button, setButton] = useState()
+
   //hook switches between dark and light social icons
   useEffect(() => {
-    let storedValue = localStorage.getItem("userViewMode")
-    console.log("storedValue", storedValue)
-    if (storedValue != null) {
-      setButtonIcon(storedValue)
-    } else {
-      localStorage.setItem("userViewMode", buttonIcon)
-      setButtonIcon(localStorage.getItem("userViewMode"))
-      console.log("buttonIcon", buttonIcon)
+    console.log("USEEFFECT")
+    if (localStorage.getItem("viewMode") == null) {
+      localStorage.setItem("viewMode", "🌞")
     }
-  })
+    setButton(localStorage.getItem("viewMode"))
+    console.log("LS", localStorage.getItem("viewMode"))
 
-  useEffect(() => {
-    let faIcon = document.querySelectorAll("svg")
-    let modeButton = document.querySelector("button")
-    console.log(modeButton)
-    if (buttonIcon == "🌞") {
-      document.body.classList.remove("lightMode")
-      document.body.classList.add("darkMode")
-      modeButton.className = "buttonDark"
-      if (faIcon[0].classList.contains("faLight")) {
-        faIcon.forEach(icon => icon.classList.remove("faLight"))
-      }
+    let key = localStorage.getItem("viewMode")
+    console.log("key", key)
+    if (key == "🌛") {
+      document.body.className = "lightMode"
+      document.querySelector("button").className = "buttonLight"
     } else {
-      if (document.body.classList.contains("darkMode")) {
-        document.body.classList.remove("darkMode")
-        document.body.classList.add("lightMode")
-        modeButton.className = "buttonLight"
-        faIcon.forEach(icon => icon.classList.add("faLight"))
-      }
+      document.body.className = "darkMode"
+
+      document.querySelector("button").className = "buttonDark"
     }
   })
 
@@ -54,7 +44,7 @@ function Toggle() {
         justifyContent: "flex-end",
       }}
     >
-      <button onClick={handleClick}>{buttonIcon}</button>
+      <button onClick={handleClick}>{button}</button>
     </div>
   )
 }
