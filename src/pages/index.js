@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SocialLink from "../components/social"
 import { rhythm } from "../utils/typography"
-import Toggle from "../components/toggle"
+
 class BlogIndex extends React.Component {
   //accessibility note: on first click of tab key, restores button outlines for keyboard users. Switches back to no outlines if mouse clicked. But still listens for tabbing.
 

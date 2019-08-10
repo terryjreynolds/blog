@@ -12,7 +12,7 @@ class BlogPostTemplate extends React.Component {
   //this patch prevents the social media links from turning back to white during lightMode on the blogpost page.
   componentDidMount() {
     const userViewMode = localStorage.getItem("userViewMode")
-    if (userViewMode == "🌛") {
+    if (userViewMode === "🌛") {
       let faIcon = document.querySelectorAll("svg")
 
       faIcon.forEach(icon => icon.classList.add("faLight"))
@@ -21,7 +21,7 @@ class BlogPostTemplate extends React.Component {
 
   render() {
     const post = this.props.data.markdownRemark
-    console.log("post", post)
+
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 

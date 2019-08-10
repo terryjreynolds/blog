@@ -6,11 +6,10 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql, withAssetPrefix } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-import { rhythm, scale } from "../utils/typography"
-import { redirectTo } from "@reach/router"
+import { rhythm } from "../utils/typography"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -56,7 +55,11 @@ const Bio = () => {
           minWidth: 170,
         }}
       >
-        <a href={`https://terryjreynolds.github.io/`} target="_blank">
+        <a
+          href={`https://terryjreynolds.github.io/`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <strong>{author}</strong>
         </a>{" "}
         is a blogger, developer and teacher from Sharbot Lake, Ontario, Canada.

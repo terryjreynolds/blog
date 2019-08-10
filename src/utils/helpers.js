@@ -32,7 +32,6 @@ function calculateReadTime(words, imageTimeTracker) {
 
   //really long, boring post
   if (readTimeMinutes > 6) {
-    console.log("calc", Math.round(readTimeMinutes))
     return `${new Array(Math.round(readTimeMinutes / 3))
       .fill("☕")
       .join("")} ${readTimeMinutes} min read`
@@ -40,18 +39,16 @@ function calculateReadTime(words, imageTimeTracker) {
 
   //very detailed post
   else if (readTimeMinutes > 3) {
-    console.log("calc1", Math.round(readTimeMinutes))
     return `${new Array(Math.round(readTimeMinutes))
       .fill("🐢")
       .join("")} ${readTimeMinutes} min read`
 
     //exceptionally short post
-  } else if (readTimeMinutes == 0) {
+  } else if (readTimeMinutes === 0) {
     return `${new Array(1).fill("💥").join("")} < 1 min read`
 
     //goldilocks post
   } else {
-    console.log("calc2", Math.round(readTimeMinutes))
     return `${new Array(Math.round(readTimeMinutes))
       .fill("🐇")
       .join("")} ${readTimeMinutes} min read`
