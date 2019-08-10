@@ -10,18 +10,20 @@ function Toggle() {
   }, [])
 
   //sets the body and svg styles according to buttonIcon state
+  useEffect(() => {
+    let svgs = document.querySelectorAll("svg")
+    if (buttonIcon === "🌞") {
+      document.body.className = "darkMode"
+      document.querySelector("button").className = "buttonDark"
+      svgs.forEach(svg => svg.classList.remove("faLight"))
+    } else if (buttonIcon === "🌛") {
+      document.body.className = "lightMode"
+      document.querySelector("button").className = "buttonLight"
 
-  let svgs = document.querySelectorAll("svg")
-  if (buttonIcon === "🌞") {
-    document.body.className = "darkMode"
-    document.querySelector("button").className = "buttonDark"
-    svgs.forEach(svg => svg.classList.remove("faLight"))
-  } else if (buttonIcon === "🌛") {
-    document.body.className = "lightMode"
-    document.querySelector("button").className = "buttonLight"
+      svgs.forEach(svg => svg.classList.add("faLight"))
+    }
+  })
 
-    svgs.forEach(svg => svg.classList.add("faLight"))
-  }
   //uses newly locally stored buttonIcon string to update buttonIcon state.
   function handleClick() {
     localStorage.setItem("viewMode", buttonIcon === "🌞" ? "🌛" : "🌞")
