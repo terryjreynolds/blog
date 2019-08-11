@@ -37,7 +37,7 @@ Life got in the way. I gave up. For a long time.
 
 #FreeCodeCamp
 
-![FreeCodeCamp Logo](.\freecodecamp.png)
+![FreeCodeCamp](.\freecodecamp.jpg)
 
 Then I went to [FreeCodeCamp](https://www.freecodecamp.org/). Overnight, the confusion lifted. What had baffled me for a lifetime became clear within just a few months.
 
