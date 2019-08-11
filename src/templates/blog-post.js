@@ -7,15 +7,17 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import { formatReadingTime } from "../utils/helpers"
+
 //this component is how the post looks after clicking on a post link on the main page
 class BlogPostTemplate extends React.Component {
-  //this patch prevents the social media links from turning back to white during lightMode on the blogpost page.
+  //this patch prevents the social media links from turning back to default white during lightMode on the blogpost page. Also, no need to clean up with unmount because falight gets removed on state change in toggle component
   componentDidMount() {
-    const userViewMode = localStorage.getItem("userViewMode")
-    if (userViewMode === "🌛") {
-      let faIcon = document.querySelectorAll("svg")
+    const viewMode = localStorage.getItem("viewMode")
 
-      faIcon.forEach(icon => icon.classList.add("faLight"))
+    if (viewMode === "🌛") {
+      let svg = document.querySelectorAll(" a > svg")
+
+      svg.forEach(icon => icon.classList.add("faLight"))
     }
   }
 

@@ -14,6 +14,10 @@ a {
   color: rgb(212, 146, 3);
 }
 
+a > svg {
+  color: white;
+}
+
 h1 {
   color: rgb(180, 9, 180);
   text-shadow: 0.05vw 0.05vw rgb(0, 0, 0);
@@ -22,7 +26,6 @@ h3 {
   color: rgb(212, 146, 3);
 }
 svg {
-  color: white;
   margin-right: 40px;
 }
 
@@ -51,7 +54,7 @@ body:not(.userTabs) button:focus {
 
 .faLight {
   width: 3vw;
-  color: rgb(0, 0, 0);
+  color: black;
 }
 
 .darkMode {
