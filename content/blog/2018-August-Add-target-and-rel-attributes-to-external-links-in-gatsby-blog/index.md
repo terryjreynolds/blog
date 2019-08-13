@@ -32,7 +32,9 @@ There is no easy way to set these attributes using pure markdown. Every👏singl
 Something like this:
 
 ```
-<a href="https://some-website.com target="_blank" rel="no opener noreferrer>Some website</a>
+    <a href="https://some-website.com
+    target="_blank" rel="no opener
+    noreferrer>Some website</a>
 
 ```
 
@@ -54,34 +56,34 @@ These instructions assume you are using some variation on the [Gatsby starter bl
 1. In your root folder, install the[ gatsby-remark-external-links package](https://www.npmjs.com/package/gatsby-remark-external-links).
 
 ```
-            npm i gatsby-remark-external-links
+    npm i gatsby-remark-external-links
 ```
 
 2. You'll need to add the following config items to your gatsby-config.js file. Chances are, your config file already contains the 'gatsby-transformer-remark' resolver. So just plunk the 'gatsby-remark-external-links' portion in there.
 
 ```
+    plugins: [
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
             plugins: [
-                {
-                    resolve: `gatsby-transformer-remark`,
-                    options: {
-                    plugins: [
-                    {
-                        resolve: "gatsby-remark-external-links",
-                        options: {
-                        target: "_self",
-                        rel: "nofollow"
-                        }
-                    }
-                    ]
-                    }
-                },
+            {
+                resolve: "gatsby-remark-external-links",
+                options: {
+                target: "_self",
+                rel: "nofollow"
+                }
+            }
+            ]
+            }
+        },
 ```
 
 3. Change the config file options object to say:
 
 ```
-            target: "_blank",
-            rel:"no opener no referrer"
+    target: "_blank",
+    rel:"no opener no referrer"
 
 ```
 

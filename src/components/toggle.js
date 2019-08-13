@@ -35,7 +35,8 @@ function Toggle() {
       style={{
         display: "flex",
         width: "100%",
-
+        paddingRight: "5px",
+        marginLeft: ".8em",
         flexDirection: "row",
         justifyContent: "flex-end",
       }}
