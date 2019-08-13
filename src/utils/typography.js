@@ -14,13 +14,13 @@ delete Wordpress2016.googleFonts
 const typography = new Typography({
   baseFontSize: "18",
   baseLineHeight: 1.5,
-  scaleRatio: 1.666,
+  scaleRatio: 1.4,
   headerGray: 0,
   headerFontFamily: ["cairo"],
-  headerWeight: 600,
+  headerWeight: 500,
   headerColor: "#efedf5",
   bodyFontFamily: ["cairo"],
-  bodyWeight: 600,
+  bodyWeight: 440,
   bodyColor: "#efedf5",
   bodyGray: 0,
 })
