@@ -34,7 +34,7 @@ function Toggle() {
     <div
       style={{
         display: "flex",
-        width: "100%",
+        width: "60%",
         paddingRight: "5px",
         marginLeft: ".8em",
         flexDirection: "row",

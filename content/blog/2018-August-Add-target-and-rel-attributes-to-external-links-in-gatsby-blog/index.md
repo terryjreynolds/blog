@@ -23,7 +23,7 @@ _Photo by [Melanie Dretvic][3] on [Unsplash][2]_
 
 Read on, or [Skip to Instructions](#instructions)
 
-Since the blog posts are markdown documents, we somehow have to set this html attribute `target="_blank"` on our anchor tags, and for [security reasons that you can read about](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/), we should also set the rel attribute to `rel="noopener noreferrer"`.
+Since the blog posts are markdown documents, we somehow have to set this html attribute `target="_blank"` on our anchor tags, and for [security reasons that you can read about](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/), we should also set the rel attribute to `rel="noopener noreferrer nofollow"`.
 
 Let me just say this straight up:
 
@@ -32,9 +32,9 @@ There is no easy way to set these attributes using pure markdown. Every👏singl
 Something like this:
 
 ```
-    <a href="https://some-website.com
-    target="_blank" rel="no opener
-    noreferrer>Some website</a>
+<a href="https://some-website.com
+target="_blank" rel="no opener
+noreferrer>Some website</a>
 
 ```
 
@@ -44,7 +44,7 @@ Exactly. 🙄 So let's not do that.
 
 Instead, lets install a node package that helps us automatically add these attributes to the gatsby-generated html at runtime.
 
-All we have to do is write a standard markdown external link like this: `[FreeCodeCamp](https://www.freecodecamp.org/)` The magic javascript in the package does the rest.
+All we have to do is write a standard markdown external link like this: `[FreeCodeCamp](https://www.freecodecamp.org/)`. The magic javascript in the package does the rest.
 
 #<a name="instructions"></a>Instructions
 
@@ -56,34 +56,34 @@ These instructions assume you are using some variation on the [Gatsby starter bl
 1. In your root folder, install the[ gatsby-remark-external-links package](https://www.npmjs.com/package/gatsby-remark-external-links).
 
 ```
-    npm i gatsby-remark-external-links
+npm i gatsby-remark-external-links
 ```
 
 2. You'll need to add the following config items to your gatsby-config.js file. Chances are, your config file already contains the 'gatsby-transformer-remark' resolver. So just plunk the 'gatsby-remark-external-links' portion in there.
 
 ```
-    plugins: [
+plugins: [
+    {
+        resolve: `gatsby-transformer-remark`,
+        options: {
+        plugins: [
         {
-            resolve: `gatsby-transformer-remark`,
+            resolve: "gatsby-remark-external-links",
             options: {
-            plugins: [
-            {
-                resolve: "gatsby-remark-external-links",
-                options: {
-                target: "_self",
-                rel: "nofollow"
-                }
+            target: "_self",
+            rel: "nofollow"
             }
-            ]
-            }
-        },
+        }
+        ]
+        }
+    },
 ```
 
 3. Change the config file options object to say:
 
 ```
-    target: "_blank",
-    rel:"no opener no referrer"
+target: "_blank",
+rel:"no opener no referrer nofollow"
 
 ```
 
