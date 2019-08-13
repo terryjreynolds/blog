@@ -31,12 +31,7 @@ There is no easy way to set these attributes using pure markdown. Every👏singl
 
 Something like this:
 
-```
-<a href="https://some-website.com
-target="_blank" rel="no opener
-noreferrer>Some website</a>
-
-```
+![HTML Pic](./html-pic3.JPG)
 
 What's that you say? The point of markdown is to write code quickly by not writing full html tags?
 
@@ -55,37 +50,15 @@ These instructions assume you are using some variation on the [Gatsby starter bl
 
 1. In your root folder, install the[ gatsby-remark-external-links package](https://www.npmjs.com/package/gatsby-remark-external-links).
 
-```
-npm i gatsby-remark-external-links
-```
+![NPM pic](./npm-pic.JPG)
 
 2. You'll need to add the following config items to your gatsby-config.js file. Chances are, your config file already contains the 'gatsby-transformer-remark' resolver. So just plunk the 'gatsby-remark-external-links' portion in there.
 
-```
-plugins: [
-    {
-        resolve: `gatsby-transformer-remark`,
-        options: {
-        plugins: [
-        {
-            resolve: "gatsby-remark-external-links",
-            options: {
-            target: "_self",
-            rel: "nofollow"
-            }
-        }
-        ]
-        }
-    },
-```
+![Config Pic](./config-pic.JPG)
 
 3. Change the config file options object to say:
 
-```
-target: "_blank",
-rel:"no opener no referrer nofollow"
-
-```
+![target pic](./target-pic2.JPG)
 
 4.  CRITICAL:
 
