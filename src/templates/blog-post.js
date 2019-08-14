@@ -13,11 +13,13 @@ class BlogPostTemplate extends React.Component {
   //this patch prevents the social media links from turning back to default white during lightMode on the blogpost page. Also, no need to clean up with unmount because falight gets removed on state change in toggle component
   componentDidMount() {
     const viewMode = localStorage.getItem("viewMode")
-
+    let svg = document.querySelectorAll(" a > svg")
     if (viewMode === "🌛") {
-      let svg = document.querySelectorAll(" a > svg")
-
+      document.body.className = "lightMode"
       svg.forEach(icon => icon.classList.add("faLight"))
+    } else {
+      document.body.className = "darkMode"
+      svg.forEach(icon => icon.classList.add("faDark"))
     }
   }
 
