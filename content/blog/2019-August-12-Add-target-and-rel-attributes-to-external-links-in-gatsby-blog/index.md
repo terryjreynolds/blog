@@ -2,7 +2,7 @@
 title: Make Your Gatsby Starter Blog Securely Open External Links in New Tabs
 description: Explains how to use the gatsby-remark-external-links plugin...
 date: 2019-08-12
-imageCount: 5
+imageCount: 7
 ---
 
 ![Links](./mike-alonzo-Xe7za0JtTeM-unsplash.jpg)
