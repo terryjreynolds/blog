@@ -53,7 +53,7 @@ const Bio = () => {
         style={{
           marginBottom: 0,
           minWidth: 170,
-          paddingRight: "10px",
+          paddingRight: "12px",
         }}
       >
         <a
