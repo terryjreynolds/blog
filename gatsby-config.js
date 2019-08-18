@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `CODECADENCE`,
-    author: `Terry J. Reynolds`,
-    description: `A blog by Terry Reynolds created using Gatsby starter blog`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    author: `Terry J Reynolds`,
+    description: `A blog by Terry J Reynolds`,
+    siteUrl: `https://terryjreynolds-blog.netlify.com/`,
     social: {
       twitter: `codecadence`,
     },
@@ -64,13 +64,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Codecadence`,
+        short_name: `Codecadence`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/eye1.png`,
       },
     },
     `gatsby-plugin-offline`,
