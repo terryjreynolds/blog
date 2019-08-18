@@ -74,7 +74,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: `twitter:image`,
-          content: `https://terryjreynolds-blog.netlify.com/content\assets\water1.jpg?123`,
+          content: `https://lh3.googleusercontent.com/lsX5yGlJjnz5IDhx2U3S94qljM_mHtLPP-vxs5RVFL8cDyFZ3A7biaK8n13rXbUBi_VrdvidyCrxNYav3mqnd9fAtVxPjUoHKOAyjpDmIFycsY7hsEqBWHAG058PRxt8MGwMm0MHOA=s268-p-k`,
         },
       ].concat(meta)}
     />
