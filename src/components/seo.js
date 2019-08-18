@@ -77,7 +77,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: `https://terryjreynolds-blog.netlify.com/content\assets\water1.jpg`,
         },
       ].concat(meta)}
     />
