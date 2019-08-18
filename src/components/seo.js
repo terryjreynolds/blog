@@ -74,7 +74,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: metaImage,
         },
       ].concat(meta)}
     />
