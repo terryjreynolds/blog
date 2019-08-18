@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Terry J Reynolds Blog" />
+        <SEO title="CODECADENCE" />
 
         <Bio />
         <SocialLink />
