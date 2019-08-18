@@ -4,7 +4,7 @@ module.exports = {
     author: `Terry J Reynolds`,
     description: `A blog by Terry J Reynolds`,
     siteUrl: `https://terryjreynolds-blog.netlify.com/`,
-    image: `https://terryjreynolds-blog.netlify.com/content\assets\water1.jpg`,
+    image: `https://lh3.googleusercontent.com/lsX5yGlJjnz5IDhx2U3S94qljM_mHtLPP-vxs5RVFL8cDyFZ3A7biaK8n13rXbUBi_VrdvidyCrxNYav3mqnd9fAtVxPjUoHKOAyjpDmIFycsY7hsEqBWHAG058PRxt8MGwMm0MHOA=s268-p-k`,
     social: {
       twitter: `@codecadence`,
     },
