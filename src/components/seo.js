@@ -19,13 +19,12 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
-            image
           }
         }
       }
     `
   )
-  const metaImage = site.siteMetadata.image
+
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -48,10 +47,7 @@ function SEO({ description, lang, meta, title }) {
           property: `og:description`,
           content: metaDescription,
         },
-        {
-          property: `og:image`,
-          content: metaImage,
-        },
+
         {
           property: `og:type`,
           content: `website`,
@@ -74,7 +70,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: metaImage,
+          content: `content\assets\water1.JPG`,
         },
       ].concat(meta)}
     />
