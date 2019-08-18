@@ -29,6 +29,7 @@ class BlogIndex extends React.Component {
 
     window.addEventListener("keydown", handleFirstTab)
   }
+  //ok
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
