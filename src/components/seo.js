@@ -62,7 +62,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: `@codecadence`,
         },
         {
           name: `twitter:title`,
