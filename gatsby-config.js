@@ -4,9 +4,9 @@ module.exports = {
     author: `Terry J Reynolds`,
     description: `A blog by Terry J Reynolds`,
     siteUrl: `https://terryjreynolds-blog.netlify.com/`,
-    image: `content\assets\water1.JPG`,
+    image: `static\water1.JPG`,
     social: {
-      twitter: `codecadence`,
+      twitter: `@codecadence`,
     },
   },
   plugins: [
