@@ -74,7 +74,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: `content\assets\profile-pic.jpg`,
+          content: metaImage,
         },
       ].concat(meta)}
     />
