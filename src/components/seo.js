@@ -74,7 +74,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: `https://lh3.googleusercontent.com/OvIGW2tpCjM7TtIrvGsORSgfKy_8nG_tiEVKDuVBMmB11iaqvvWzh6Q3tfMmqno-Uz09_YsuJ4sAACgXgTjvGgY-xqmi0gx-BdjAnKmOFSKg8F2zNYeGY3fJ6InUkm5WIAkhuueNag=s200-p-k`,
+          content: metaImage,
         },
       ].concat(meta)}
     />
