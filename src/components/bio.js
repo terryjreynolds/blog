@@ -57,7 +57,7 @@ const Bio = () => {
         }}
       >
         <a
-          href={`https://terryjreynolds.github.io/`}
+          href={`https://terryjreynolds.dev/`}
           target="_blank"
           rel="noopener noreferrer"
         >
