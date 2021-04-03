@@ -31,6 +31,9 @@ h3 {
 svg {
   margin-right: 40px;
 }
+pre {
+  background-color: #5a5a5a;
+}
 
 button {
   background-color: black;
