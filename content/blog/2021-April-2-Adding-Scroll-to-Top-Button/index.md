@@ -33,7 +33,8 @@ const scrollTop = () =>{
 
 <div>
     
-<div id="scrollTopBtn" onClick={scrollTop} onKeyDown={scrollTop}><FontAwesomeIcon  id="arrowUp" icon={faArrowCircleUp } /></div>
+<div id="scrollTopBtn" onClick={scrollTop} onKeyDown={scrollTop}>  
+<FontAwesomeIcon  id="arrowUp" icon={faArrowCircleUp } /></div>
   
 </div>
  );
@@ -160,7 +161,9 @@ const scrollTop = () =>{
 
 <div>
     
-<div id="scrollTopBtn" onClick={scrollTop} onKeyDown={scrollTop} role="link" aria-label="Scroll" tabIndex={0} style={showScroll === true ? {display: "block"} : {display: "none"}} ><FontAwesomeIcon  id="arrowUp" icon={ faArrowCircleUp } /></div>
+<div id="scrollTopBtn" onClick={scrollTop} onKeyDown={scrollTop} role="link" aria-label="Scroll"   
+tabIndex={0} style={showScroll === true ? {display: "block"} : {display: "none"}} >  
+<FontAwesomeIcon  id="arrowUp" icon={ faArrowCircleUp } /></div>
   
 </div>
  );
