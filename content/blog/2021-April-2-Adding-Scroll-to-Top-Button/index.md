@@ -59,7 +59,9 @@ For the button, I created a showScroll boolean state and set it to false.
 Then, I added a ternary conditional statement to my button to have it display when my showScroll state was true. (I also added some accessibility settings to the div)
 
 ```
-<div id="scrollTopBtn" onClick={scrollTop} onKeyDown={scrollTop} role="link" aria-label="Scroll" tabIndex={0} style={showScroll === true ? {display: "block"} : {display: "none"}} ><FontAwesomeIcon  id="arrowUp" icon={faArrowCircleUp } /></div>
+<div id="scrollTopBtn" onClick={scrollTop} onKeyDown={scrollTop} role="link" aria-label="Scroll"   
+tabIndex={0} style={showScroll === true ? {display: "block"} : {display: "none"}} ><FontAwesomeIcon  id="arrowUp"   
+icon={faArrowCircleUp } /></div>
 
 ```
 
