@@ -1,6 +1,6 @@
 ---
 title: Building a Scroll to Top Button Component for your Gatsby Site
-description:The Dos and Don'ts of making a scroll to top button in React/Gatsby
+description: The Dos and Don'ts of making a scroll to top button in React/Gatsby
 date: 2021-03-02
 imageCount: 5
 ---
