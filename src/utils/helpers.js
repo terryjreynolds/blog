@@ -1,6 +1,5 @@
 //adjusts the read time up based on number of images to view. 12 seconds for the first image, 11 for the second and so on. Anything over 10 gets 3 seconds each. This follows the Medium convention
 export function formatReadingTime(words, imageCount) {
-  console.log("words", words, "imageCount", imageCount)
 
   let imageTimeTracker = 0
 
@@ -11,11 +10,11 @@ export function formatReadingTime(words, imageCount) {
       imageTimeTracker += 3
     } else {
       imageTimeTracker += j
-      console.log("imageTimeTracker", imageTimeTracker)
+
       j -= 1
-      console.log("j", j)
+
     }
-    console.log("imageTimeTrackerValue", imageTimeTracker)
+
   }
   return calculateReadTime(words, imageTimeTracker)
 }
@@ -26,7 +25,6 @@ function calculateReadTime(words, imageTimeTracker) {
   const readTimeMinutes = Math.round(
     ((words / 275) * 60 + imageTimeTracker) / 60
   )
-  console.log("readTime", readTimeMinutes)
 
   //readTimeMinutes value used to calculate how many rabbits, turtles or coffee emojis to show
 
