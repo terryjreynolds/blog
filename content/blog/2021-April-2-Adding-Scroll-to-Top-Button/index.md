@@ -52,7 +52,9 @@ At first, I thought I could just add an onScroll event to the div that wrapped t
 Well, in react, it's considered problematic to listen for DOM events such as scroll. Things are supposed to happen on state change. So, I decided to leverage React Hooks and the local state of my button component.
 
 For the button, I created a showScroll boolean state and set it to false. 
+
 ```
+
  const [showScroll, setShowScroll] = useState(false);
 
 ```
@@ -60,8 +62,7 @@ For the button, I created a showScroll boolean state and set it to false.
 Then, I added a ternary conditional statement to my button to have it display when my showScroll state was true. (I also added some accessibility settings to the div)
 
 ```
-<div id="scrollTopBtn" onClick={scrollTop} onKeyDown={scrollTop}   
-role="link" aria-label="scroll"   
+<div id="scrollTopBtn" onClick={scrollTop} onKeyDown={scrollTop} role="link" aria-label="scroll"   
 tabIndex={0}   
 style={showScroll === true ? {display: "block"} : {display: "none"}} >  
 <FontAwesomeIcon  id="arrowUp"   
